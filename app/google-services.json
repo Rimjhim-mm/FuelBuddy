@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "823046808448",
+    "project_id": "fuelfrenzy",
+    "storage_bucket": "fuelfrenzy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823046808448:android:5be304f685f6ac58701765",
+        "android_client_info": {
+          "package_name": "com.example.fuelfrenzy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzD9wH0EG612-YfnxRnbfK_UzJMPlu_Rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FuelFrenzy</string>
+    <string name="Register">Register</string>
+    <string name="Login">Login</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="Confirm_password">\n</string>
+    <string name="api_key">AIzaSyDCHOI7OoSldiRXQ8h6HGQnY1QIP-FZ2oo</string>
+</resources>
