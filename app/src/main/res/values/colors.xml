@@ -11,4 +11,8 @@
     <color name="dark_green">#5d8270</color>
     <color name="darker_green">#6d987d</color>
     <color name="orange">#ed8562 </color>
+    <color name="pink">#D71689</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="googleRed">#DB4437</color>
+    <color name="githubBlack">#333333</color>
 </resources>

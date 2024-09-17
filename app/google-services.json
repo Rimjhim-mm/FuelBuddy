@@ -1,13 +1,33 @@
 {
   "project_info": {
-    "project_number": "823046808448",
-    "project_id": "fuelfrenzy",
-    "storage_bucket": "fuelfrenzy.appspot.com"
+    "project_number": "1010165318863",
+    "firebase_url": "https://fuelfrenzy-423317-default-rtdb.firebaseio.com",
+    "project_id": "fuelfrenzy-423317",
+    "storage_bucket": "fuelfrenzy-423317.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:823046808448:android:5be304f685f6ac58701765",
+        "mobilesdk_app_id": "1:1010165318863:android:094e9f508bbdeac3e163ba",
+        "android_client_info": {
+          "package_name": "com.example.fuelFrenzy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIy-HxMXTXEWnULnKoc5G1-JvyVUFwUq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010165318863:android:8433735349d5fe48e163ba",
         "android_client_info": {
           "package_name": "com.example.fuelfrenzy"
         }
@@ -15,7 +35,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDzD9wH0EG612-YfnxRnbfK_UzJMPlu_Rw"
+          "current_key": "AIzaSyBIy-HxMXTXEWnULnKoc5G1-JvyVUFwUq4"
         }
       ],
       "services": {

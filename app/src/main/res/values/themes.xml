@@ -4,4 +4,9 @@
     <style name="Theme.FuelFrenzy" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="background">@color/light_green</item>
     </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
 </resources>

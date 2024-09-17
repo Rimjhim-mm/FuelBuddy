@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/news"
+            android:title="News" />
+        <item
+            android:id="@+id/nav_navigation"
+            android:icon="@drawable/baseline_assistant_navigation_24"
+            android:title="Navigate" />
+    </group>
+    <item android:title="More">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_main"
+                    android:icon="@drawable/baseline_add_home_24"
+                    android:title="Home" />
+                <item
+                    android:id="@+id/nav_add_account"
+                    android:icon="@drawable/baseline_add_24"
+                    android:title="Add Account" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/baseline_exit_to_app_24"
+                    android:title="Logout" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="About ">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/baseline_share_24"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/baseline_info_24"
+                android:title="Info" />
+        </menu>
+    </item>
+</menu>

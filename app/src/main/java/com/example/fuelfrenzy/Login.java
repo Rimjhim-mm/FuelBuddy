@@ -1,41 +1,41 @@
 package com.example.fuelfrenzy;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.app.ProgressDialog;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.text.TextUtils;
+        import android.util.Log;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.ProgressBar;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+        import androidx.activity.EdgeToEdge;
+        import androidx.annotation.NonNull;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+        import com.google.android.gms.tasks.OnCompleteListener;
+        import com.google.android.gms.tasks.Task;
+        import com.google.firebase.auth.AuthResult;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
-    TextInputEditText edtTxtEmail, edtTxtPassword;
+    EditText edtTxtEmail, edtTxtPassword;
     Button btnLogin;
     FirebaseAuth mAuth;
     TextView txtView;
+    ProgressDialog progressDialog;
 
     @Override
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            Intent intent= new Intent(getApplicationContext(), MapPage.class);
+            Intent intent= new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
         }
@@ -46,17 +46,15 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         mAuth= FirebaseAuth.getInstance();
         edtTxtEmail= findViewById(R.id.email);
         edtTxtPassword= findViewById(R.id.password);
         btnLogin= findViewById(R.id.LoginButton);
         txtView= findViewById(R.id.registerNow);
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Logging in, please wait...");
 
         txtView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +82,9 @@ public class Login extends AppCompatActivity {
                     return;
                 }
 
+                progressDialog.show();
+                Log.d("Register", "Attempting to create user with email: " + email);
+
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -93,10 +94,11 @@ public class Login extends AppCompatActivity {
                                     Toast.makeText(Login.this, "Login successful.",
                                             Toast.LENGTH_SHORT).show();
 
-                                    Intent intent= new Intent(getApplicationContext(), MapPage.class);
+                                    Intent intent= new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
+                                    progressDialog.hide();
                                     Toast.makeText(Login.this, "Login failed.",
                                             Toast.LENGTH_SHORT).show();
                                 }

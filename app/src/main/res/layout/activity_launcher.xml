@@ -4,32 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:gravity="center"
-    android:orientation="vertical"
     android:background="@color/light_green"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Launcher">
 
     <ImageView
-        android:id="@+id/app_name"
+        android:id="@+id/intro"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/app_name" />
-
-    <ImageView
-        android:id="@+id/app_logo"
-        android:layout_width="match_parent"
-        android:layout_height="376dp"
-        app:srcCompat="@drawable/logo" />
-
-    <ProgressBar
-        android:id="@+id/loadingProgressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/darker_green"
-        android:progressDrawable="@drawable/custom_progress_bar"
-        android:layout_margin="20dp"/>
-
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY" />
 </LinearLayout>
