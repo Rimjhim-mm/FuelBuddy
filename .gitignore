@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+res/
+app/src/main/java/com/example/fuelfrenzy/MapPage.java
