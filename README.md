@@ -13,7 +13,18 @@ Looking ahead, the application is set to incorporate real-time data integration 
 Currently in its testing phase, the application addresses any potential issue, and optimize its overall user experience. These efforts aim to deliver a polished and reliable tool that meets the diverse fuel-related needs of its users
 
 
+#### RUNNING THE FILE LOCALLY ####
 
+Sync Gradle Files
 
-The code can be run locally normally. However the assets are required for better experience.
-Also since this is my first attempt at android developement, the api is best handled at my local machine.
+When the project opens, Android Studio will automatically detect build.gradle files.
+Allow it to sync dependencies (ensure you're connected to the internet).
+
+Check SDK and Dependencies
+Update or install any missing dependencies.
+
+Configure the Emulator or Physical Device
+Set up an Android Emulator under Device Manager or connect a physical Android device
+
+Build and Run the Application
+
